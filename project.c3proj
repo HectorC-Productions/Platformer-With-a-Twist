@@ -61,6 +61,14 @@
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "wttfpqmuxb4",
@@ -70,7 +78,10 @@
 			"Platforms",
 			"Touch",
 			"MoneyEarned",
-			"Mouse"
+			"Mouse",
+			"BuyablePlatform",
+			"PlatformMoney",
+			"BuyButton"
 		],
 		"subfolders": []
 	},

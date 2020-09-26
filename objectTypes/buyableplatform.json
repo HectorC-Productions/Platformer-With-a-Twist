@@ -1,0 +1,74 @@
+{
+	"name": "BuyablePlatform",
+	"plugin-id": "Sprite",
+	"sid": 281916770359233,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "PassiveMoney",
+			"type": "number",
+			"desc": "Tracks the amount of money it will make normally",
+			"sid": 920100199152034
+		},
+		{
+			"name": "TapMoney",
+			"type": "number",
+			"desc": "Amount of money you get when you tap it",
+			"sid": 742554881841326
+		},
+		{
+			"name": "Tier",
+			"type": "number",
+			"desc": "Tier level of platform",
+			"sid": 947171547218550
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 427494108222941
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6976608,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 559347,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 837682382927769,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
