@@ -1,5 +1,129 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Money",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "How much money the player is gaining",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 842494410138290
+		},
+		{
+			"eventType": "variable",
+			"name": "Multiplier",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Once something is made, give even more currency",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 310705591165547
+		},
+		{
+			"eventType": "variable",
+			"name": "TouchID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "To recognize what its touching",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 560616785600699
+		},
+		{
+			"eventType": "variable",
+			"name": "TouchLastPositionX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Recognize the last place touched in the x-axis",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 645393287152402
+		},
+		{
+			"eventType": "variable",
+			"name": "TouchLastPositionY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Recognize the last place touched in the y-axis",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 387968700242884
+		},
+		{
+			"eventType": "variable",
+			"name": "UnixTimeClose",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The game needs to recognize when the game is closed",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 247275699041975
+		},
+		{
+			"eventType": "variable",
+			"name": "UnixTimeOpen",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The game needs to recognize when the game opens up again",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 219514899876293
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 920322436242576
+				},
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 658380034552738,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 643590652453181,
+					"parameters": {
+						"variable": "Money",
+						"value": "1*Multiplier"
+					}
+				}
+			],
+			"sid": 194193794667821,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 272150496127271
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "MoneyEarned",
+					"sid": 804602697843914,
+					"parameters": {
+						"text": "Money"
+					}
+				}
+			],
+			"sid": 857920584639892
+		}
+	],
 	"sid": 149858398527401
 }
