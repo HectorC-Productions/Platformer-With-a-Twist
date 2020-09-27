@@ -1,5 +1,347 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Variables for the money"
+		},
+		{
+			"eventType": "variable",
+			"name": "Money",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "How much money the player is gaining",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 754275578761295
+		},
+		{
+			"eventType": "variable",
+			"name": "Multiplier",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Once something is made, give even more currency",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 310705591165547
+		},
+		{
+			"eventType": "variable",
+			"name": "ClickingNumber",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Amount of money received when clicking once",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 545649285791721
+		},
+		{
+			"eventType": "comment",
+			"text": "Variables for click position"
+		},
+		{
+			"eventType": "variable",
+			"name": "TouchID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "To recognize what its touching",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 560616785600699
+		},
+		{
+			"eventType": "variable",
+			"name": "TouchLastPositionX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Recognize the last place touched in the x-axis",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 645393287152402
+		},
+		{
+			"eventType": "variable",
+			"name": "TouchLastPositionY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Recognize the last place touched in the y-axis",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 387968700242884
+		},
+		{
+			"eventType": "comment",
+			"text": "Variables for when the game runs or doesnt run"
+		},
+		{
+			"eventType": "variable",
+			"name": "UnixTimeClose",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The game needs to recognize when the game is closed",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 247275699041975
+		},
+		{
+			"eventType": "variable",
+			"name": "UnixTimeOpen",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The game needs to recognize when the game opens up again",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 219514899876293
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 703922198049153
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "MoneyEarned",
+					"sid": 764784591113702,
+					"parameters": {
+						"text": "Money"
+					}
+				}
+			],
+			"sid": 910896227670344
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 920322436242576
+				},
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 658380034552738,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 643590652453181,
+					"parameters": {
+						"variable": "Money",
+						"value": "1*Multiplier"
+					}
+				}
+			],
+			"sid": 194193794667821,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 436959667940620,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 587255929927453,
+					"parameters": {
+						"variable": "Money",
+						"value": "ClickingNumber+BuyablePlatform.PassiveMoney"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BuyablePlatform",
+					"sid": 132892147049738,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 380280495128870
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 280767757964849,
+					"parameters": {
+						"variable": "Money",
+						"comparison": 5,
+						"value": "50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "BuyButton",
+					"sid": 453735940877065,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BuyablePlatform",
+					"sid": 574846864788146,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 256841581172667
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 147556311635944,
+					"parameters": {
+						"object": "BuyButton"
+					}
+				},
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 185491291463545,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BuyButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 990197964529698,
+					"parameters": {
+						"variable": "Money",
+						"value": "50"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "BuyablePlatform",
+					"sid": 784467037896995,
+					"behaviorType": "Solid",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "BuyablePlatform",
+					"sid": 974746803670778,
+					"parameters": {
+						"instance-variable": "Tier",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BuyablePlatform",
+					"sid": 643340079431739,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 976287023368809,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "BuyablePlatform",
+					"sid": 754330164740985,
+					"parameters": {
+						"instance-variable": "Tier",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "is-enabled",
+					"objectClass": "BuyablePlatform",
+					"sid": 981624256682844,
+					"behaviorType": "Solid"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "BuyablePlatform",
+					"sid": 511024981345311,
+					"parameters": {
+						"instance-variable": "PassiveMoney",
+						"value": "BuyablePlatform.Tier"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "BuyablePlatform",
+					"sid": 529306569678924,
+					"parameters": {
+						"instance-variable": "TapMoney",
+						"value": "5*BuyablePlatform.Tier"
+					}
+				}
+			],
+			"sid": 561262424271386
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 139754511404621,
+					"parameters": {
+						"object": "BuyablePlatform"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 289324807387254,
+					"parameters": {
+						"variable": "Money",
+						"value": "BuyablePlatform.TapMoney"
+					}
+				}
+			],
+			"sid": 737832632807621
+		}
+	],
 	"sid": 149858398527401
 }
