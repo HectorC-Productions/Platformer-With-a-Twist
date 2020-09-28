@@ -47,6 +47,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
@@ -81,7 +89,8 @@
 			"Mouse",
 			"BuyablePlatform",
 			"PlatformMoney",
-			"BuyButton"
+			"BuyButton",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -109,7 +118,18 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "coin_sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 727260688618724
+				},
+				{
+					"name": "jump_07.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 792948721068921
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
