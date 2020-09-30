@@ -341,6 +341,31 @@
 				}
 			],
 			"sid": 737832632807621
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-jump",
+					"objectClass": "Character",
+					"sid": 192711818413708,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 296090972628791,
+					"parameters": {
+						"audio-file": "jump_07",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 767475320125635
 		}
 	],
 	"sid": 149858398527401
