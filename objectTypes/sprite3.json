@@ -1,0 +1,57 @@
+{
+	"name": "Sprite3",
+	"plugin-id": "Sprite",
+	"sid": 333844280991474,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 307,
+						"height": 196,
+						"originX": 0.46254071661237783,
+						"originY": 0.20408163265306123,
+						"originalSource": "C:\\Users\\enman\\Desktop\\github cat  project\\Platformer-With-a-Twist\\images\\platform 2 .png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2208559,
+						"collisionPoly": {
+							"points": [
+								0.18892508143322476,
+								0.030612244897959183,
+								0.46254071661237783,
+								0.02040816326530612,
+								0.739413680781759,
+								0.02040816326530612,
+								0.752442996742671,
+								0.20408163265306123,
+								0.739413680781759,
+								0.3826530612244898,
+								0.46254071661237783,
+								0.9897959183673469,
+								0.1986970684039088,
+								0.35714285714285715,
+								0.18241042345276873,
+								0.20408163265306123
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 470861365701559,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
