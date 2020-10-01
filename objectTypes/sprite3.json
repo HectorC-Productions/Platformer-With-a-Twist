@@ -41,6 +41,38 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1
+					},
+					{
+						"width": 349,
+						"height": 238,
+						"originX": 0.4785100286532951,
+						"originY": 0.3277310924369748,
+						"originalSource": "C:\\Users\\enman\\Desktop\\github cat  project\\Platformer-With-a-Twist\\images\\platform 2 highlight - Copy-export.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6586165,
+						"collisionPoly": {
+							"points": [
+								0.2177650429799427,
+								0.15546218487394958,
+								0.4785100286532951,
+								0.15126050420168066,
+								0.7392550143266475,
+								0.15126050420168066,
+								0.9340974212034384,
+								0.3277310924369748,
+								0.7306590257879656,
+								0.48739495798319327,
+								0.4785100286532951,
+								0.9873949579831933,
+								0.24068767908309455,
+								0.46218487394957986,
+								0.2177650429799427,
+								0.3277310924369748
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
 					}
 				],
 				"sid": 470861365701559,
