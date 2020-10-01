@@ -1,10 +1,16 @@
 {
-	"name": "Sprite4",
+	"name": "Monster",
 	"plugin-id": "Sprite",
 	"sid": 743822762784813,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 646161228937614
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

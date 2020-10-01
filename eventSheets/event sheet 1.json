@@ -246,6 +246,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 563678036620762,
+					"parameters": {
+						"audio-file": "coin_sound",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-enabled",
 					"objectClass": "BuyablePlatform",
 					"sid": 784467037896995,
@@ -270,6 +281,11 @@
 					"parameters": {
 						"frame-number": "1"
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BuyButton",
+					"sid": 384811314312029
 				}
 			],
 			"sid": 976287023368809,
@@ -347,8 +363,8 @@
 			"conditions": [
 				{
 					"id": "on-jump",
-					"objectClass": "Character",
-					"sid": 192711818413708,
+					"objectClass": "Monster",
+					"sid": 546704898753815,
 					"behaviorType": "Platform"
 				}
 			],
@@ -356,7 +372,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 296090972628791,
+					"sid": 958613518375721,
 					"parameters": {
 						"audio-file": "jump_07",
 						"loop": "not-looping",
@@ -365,7 +381,7 @@
 					}
 				}
 			],
-			"sid": 767475320125635
+			"sid": 893234615706345
 		}
 	],
 	"sid": 149858398527401
