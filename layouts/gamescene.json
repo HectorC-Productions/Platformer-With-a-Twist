@@ -248,7 +248,7 @@
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "PressStart2P-Regular",
 						"size": 12,
 						"line-height": 0,
 						"bold": false,

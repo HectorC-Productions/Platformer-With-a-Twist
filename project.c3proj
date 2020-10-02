@@ -132,6 +132,16 @@
 					"name": "jump_07.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 792948721068921
+				},
+				{
+					"name": "teleport_sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 970753041919421
+				},
+				{
+					"name": "Goofy Spring Bounce.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 161922819910897
 				}
 			],
 			"subfolders": []
@@ -145,7 +155,13 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "PressStart2P-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 467663336428446
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
