@@ -36,64 +36,6 @@
 			"sid": 545649285791721
 		},
 		{
-			"eventType": "comment",
-			"text": "Variables for click position"
-		},
-		{
-			"eventType": "variable",
-			"name": "TouchID",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "To recognize what its touching",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 560616785600699
-		},
-		{
-			"eventType": "variable",
-			"name": "TouchLastPositionX",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "Recognize the last place touched in the x-axis",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 645393287152402
-		},
-		{
-			"eventType": "variable",
-			"name": "TouchLastPositionY",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "Recognize the last place touched in the y-axis",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 387968700242884
-		},
-		{
-			"eventType": "comment",
-			"text": "Variables for when the game runs or doesnt run"
-		},
-		{
-			"eventType": "variable",
-			"name": "UnixTimeClose",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "The game needs to recognize when the game is closed",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 247275699041975
-		},
-		{
-			"eventType": "variable",
-			"name": "UnixTimeOpen",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "The game needs to recognize when the game opens up again",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 219514899876293
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -167,14 +109,6 @@
 						"variable": "Money",
 						"value": "ClickingNumber+BuyablePlatform.PassiveMoney"
 					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "BuyablePlatform",
-					"sid": 132892147049738,
-					"parameters": {
-						"frame-number": "0"
-					}
 				}
 			],
 			"sid": 380280495128870
@@ -196,16 +130,16 @@
 			"actions": [
 				{
 					"id": "set-visible",
-					"objectClass": "BuyButton",
-					"sid": 453735940877065,
+					"objectClass": "BuyButton2",
+					"sid": 167563633416275,
 					"parameters": {
 						"visibility": "visible"
 					}
 				},
 				{
 					"id": "set-animation-frame",
-					"objectClass": "BuyablePlatform",
-					"sid": 574846864788146,
+					"objectClass": "Platform1",
+					"sid": 886270834542382,
 					"parameters": {
 						"frame-number": "1"
 					}
@@ -233,6 +167,16 @@
 						"click-type": "clicked",
 						"object-clicked": "BuyButton"
 					}
+				},
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 983745336999732,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BuyButton2"
+					}
 				}
 			],
 			"actions": [
@@ -258,8 +202,8 @@
 				},
 				{
 					"id": "set-enabled",
-					"objectClass": "BuyablePlatform",
-					"sid": 784467037896995,
+					"objectClass": "Platform1",
+					"sid": 620665146221989,
 					"behaviorType": "Solid",
 					"parameters": {
 						"state": "enabled"
@@ -267,25 +211,25 @@
 				},
 				{
 					"id": "add-to-instvar",
-					"objectClass": "BuyablePlatform",
-					"sid": 974746803670778,
+					"objectClass": "Platform1",
+					"sid": 484972354408864,
 					"parameters": {
 						"instance-variable": "Tier",
 						"value": "1"
 					}
 				},
 				{
-					"id": "set-animation-frame",
-					"objectClass": "BuyablePlatform",
-					"sid": 643340079431739,
-					"parameters": {
-						"frame-number": "1"
-					}
+					"id": "destroy",
+					"objectClass": "BuyButton2",
+					"sid": 343972801395211
 				},
 				{
-					"id": "destroy",
-					"objectClass": "BuyButton",
-					"sid": 384811314312029
+					"id": "set-animation-frame",
+					"objectClass": "Platform1",
+					"sid": 605423870656895,
+					"parameters": {
+						"frame-number": "0"
+					}
 				}
 			],
 			"sid": 976287023368809,
@@ -296,8 +240,8 @@
 			"conditions": [
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "BuyablePlatform",
-					"sid": 754330164740985,
+					"objectClass": "Platform1",
+					"sid": 587042051166250,
 					"parameters": {
 						"instance-variable": "Tier",
 						"comparison": 0,
@@ -306,28 +250,28 @@
 				},
 				{
 					"id": "is-enabled",
-					"objectClass": "BuyablePlatform",
-					"sid": 981624256682844,
+					"objectClass": "Platform1",
+					"sid": 987872716874853,
 					"behaviorType": "Solid"
 				}
 			],
 			"actions": [
 				{
 					"id": "set-instvar-value",
-					"objectClass": "BuyablePlatform",
-					"sid": 511024981345311,
+					"objectClass": "Platform1",
+					"sid": 155188364776729,
 					"parameters": {
-						"instance-variable": "PassiveMoney",
-						"value": "BuyablePlatform.Tier"
+						"instance-variable": "PassiveIncome",
+						"value": "Platform1.Tier"
 					}
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "BuyablePlatform",
-					"sid": 529306569678924,
+					"objectClass": "Platform1",
+					"sid": 769152371007394,
 					"parameters": {
-						"instance-variable": "TapMoney",
-						"value": "5*BuyablePlatform.Tier"
+						"instance-variable": "ClickableIncome",
+						"value": "5*Platform1.Tier"
 					}
 				}
 			],
@@ -339,9 +283,9 @@
 				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
-					"sid": 139754511404621,
+					"sid": 823052531648473,
 					"parameters": {
-						"object": "BuyablePlatform"
+						"object": "Platform1"
 					}
 				}
 			],
@@ -349,10 +293,18 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 289324807387254,
+					"sid": 837982149703462,
 					"parameters": {
 						"variable": "Money",
-						"value": "BuyablePlatform.TapMoney"
+						"value": "Platform1.ClickableIncome"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "Platform1",
+					"sid": 176178720540025,
+					"parameters": {
+						"speed": "5"
 					}
 				}
 			],

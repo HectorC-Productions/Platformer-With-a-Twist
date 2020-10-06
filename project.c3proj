@@ -93,8 +93,9 @@
 			"Audio",
 			"Sprite",
 			"Sprite2",
-			"Sprite3",
-			"Monster"
+			"Platform1",
+			"Monster",
+			"BuyButton2"
 		],
 		"subfolders": []
 	},
