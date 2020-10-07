@@ -1,0 +1,57 @@
+{
+	"name": "Sprite4",
+	"plugin-id": "Sprite",
+	"sid": 556866403765564,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 325,
+						"height": 168,
+						"originX": 0.5476923076923077,
+						"originY": 0.5476190476190477,
+						"originalSource": "C:\\Users\\enman\\Desktop\\github cat  project\\Platformer-With-a-Twist\\images\\exit portal.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3159535,
+						"collisionPoly": {
+							"points": [
+								0.2923076923076923,
+								0.35119047619047616,
+								0.5476923076923077,
+								0.02976190476190476,
+								0.8646153846153846,
+								0.2261904761904762,
+								0.7661538461538462,
+								0.5476190476190477,
+								0.7569230769230769,
+								0.6547619047619048,
+								0.5476923076923077,
+								0.9880952380952381,
+								0.31076923076923074,
+								0.7023809523809523,
+								0.30153846153846153,
+								0.5476190476190477
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 329679285561694,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

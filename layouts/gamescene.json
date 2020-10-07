@@ -99,7 +99,7 @@
 					"world": {
 						"x": 908,
 						"y": 882,
-						"width": 80.09943820027704,
+						"width": 80.09943820027702,
 						"height": 52.69699881597174,
 						"originX": 0.46254071661237783,
 						"originY": 0.20408163265306123,
@@ -349,7 +349,7 @@
 						"x": 765,
 						"y": 531,
 						"width": 92.77979039862048,
-						"height": 54.029874915305754,
+						"height": 54.02987491530576,
 						"originX": 0.4959677419354839,
 						"originY": 0.25675675675675674,
 						"color": [
@@ -422,6 +422,93 @@
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 17,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 285,
+						"y": 373,
+						"width": 60,
+						"height": 57,
+						"originX": 0.5051546391752577,
+						"originY": 0.4105263157894737,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite4",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 693,
+						"y": 302,
+						"width": 157,
+						"height": 91,
+						"originX": 0.5476923076923077,
+						"originY": 0.5476190476190477,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite5",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 563.6428571428571,
+						"y": 568.7529411764706,
+						"width": 83,
+						"height": 93,
+						"originX": 0.35714285714285715,
+						"originY": 0.42745098039215684,
 						"color": [
 							1,
 							1,

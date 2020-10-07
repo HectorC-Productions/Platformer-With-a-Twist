@@ -102,7 +102,10 @@
 			"Build3",
 			"Teleport",
 			"Platform4",
-			"Build4"
+			"Build4",
+			"Sprite3",
+			"Sprite4",
+			"Sprite5"
 		],
 		"subfolders": []
 	},
