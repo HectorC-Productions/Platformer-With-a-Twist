@@ -958,6 +958,22 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "Coin",
+							"sid": 976851738206477,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Coin2",
+							"sid": 419736900791915,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-animation-frame",
 							"objectClass": "Platform4",
 							"sid": 808232733210430,
@@ -1384,6 +1400,31 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 552325572670458,
+							"parameters": {
+								"object": "Platform5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 680040398114099,
+							"parameters": {
+								"variable": "Money",
+								"value": "Platform5.ClickableIncome"
+							}
+						}
+					],
+					"sid": 856183249915752
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Platform5",
 							"sid": 209673337487159,
@@ -1406,6 +1447,391 @@
 				}
 			],
 			"sid": 910420424922694
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "6th Platform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 490802054840273,
+							"parameters": {
+								"variable": "Money",
+								"comparison": 5,
+								"value": "1000"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BuySpring6",
+							"sid": 740676278915654,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Platform6",
+							"sid": 888764893319812,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform6",
+							"sid": 574869793730280,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 406495130585003
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 270282682008627,
+							"parameters": {
+								"object": "BuySpring6"
+							}
+						},
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 442011911140285,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "BuySpring6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 413684536375995,
+							"parameters": {
+								"variable": "Money",
+								"value": "1000"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 990667097611350,
+							"parameters": {
+								"audio-file": "coin_sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Platform6",
+							"sid": 617672056851250,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Platform6",
+							"sid": 736223194797815,
+							"parameters": {
+								"instance-variable": "Tier",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "BuySpring6",
+							"sid": 385047946284586
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Platform6",
+							"sid": 177284465106678,
+							"parameters": {
+								"instance-variable": "NotGlowing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform6",
+							"sid": 451644956560119,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 794825002132713,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Platform6",
+							"sid": 408685260494845,
+							"parameters": {
+								"instance-variable": "Tier",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Platform6",
+							"sid": 651769861951709,
+							"behaviorType": "Solid"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform6",
+							"sid": 393425007152618,
+							"parameters": {
+								"instance-variable": "PassiveIncome",
+								"value": "Platform6.Tier"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform6",
+							"sid": 681075208432756,
+							"parameters": {
+								"instance-variable": "ClickableIncome",
+								"value": "30*Platform6.Tier"
+							}
+						}
+					],
+					"sid": 487521547994366
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 253718713641646,
+							"parameters": {
+								"object": "Platform6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 131364051014975,
+							"parameters": {
+								"variable": "Money",
+								"value": "Platform6.ClickableIncome"
+							}
+						}
+					],
+					"sid": 436027120580997
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Platform6",
+							"sid": 577516064710015,
+							"parameters": {
+								"instance-variable": "NotGlowing"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform6",
+							"sid": 150425992494197,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 762806920058046
+				}
+			],
+			"sid": 890845982603725
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Final Platform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 190275523995287,
+							"parameters": {
+								"variable": "Money",
+								"comparison": 5,
+								"value": "2000"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BuySpring7",
+							"sid": 397056423143141,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Teleport2",
+							"sid": 433969802002108,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Teleport2",
+							"sid": 407019792814849,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 340687404690573
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 702322309399009,
+							"parameters": {
+								"object": "BuySpring7"
+							}
+						},
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 122682688341211,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "BuySpring7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 985730959344323,
+							"parameters": {
+								"variable": "Money",
+								"value": "2000"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 493397565843130,
+							"parameters": {
+								"audio-file": "coin_sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Teleport2",
+							"sid": 896839998192329,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "BuySpring7",
+							"sid": 816815092692363
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Teleport2",
+							"sid": 989549349263754,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 550187575171258,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Monster",
+							"sid": 877818123323747,
+							"parameters": {
+								"object": "Teleport2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 241355361918213,
+							"parameters": {
+								"layout": "LvlCompleted"
+							}
+						},
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 414894875402908
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 149553114609764
+						}
+					],
+					"sid": 114215530698737
+				}
+			],
+			"sid": 174832794649370
 		}
 	],
 	"sid": 149858398527401

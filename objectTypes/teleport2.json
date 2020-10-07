@@ -1,0 +1,111 @@
+{
+	"name": "Teleport2",
+	"plugin-id": "Sprite",
+	"sid": 900929666893995,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 151683836391169
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 248,
+						"height": 148,
+						"originX": 0.4959677419354839,
+						"originY": 0.25675675675675674,
+						"originalSource": "C:\\Users\\colom\\OneDrive\\Desktop\\teleport platform.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8439311,
+						"collisionPoly": {
+							"points": [
+								0.0040322580645157854,
+								0.19594594594594517,
+								0.01814516129032189,
+								0.030405405405405407,
+								0.4959677419354839,
+								0.013513513513513514,
+								0.967741935483868,
+								0.03378378378378359,
+								0.907258064516126,
+								0.25,
+								0.8830645161290323,
+								0.5675675675675675,
+								0.4959677419354839,
+								0.9864864864864865,
+								0.1693548387096774,
+								0.4594594594594595,
+								0.16935483870967755,
+								0.23648648648648649
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 248,
+						"height": 148,
+						"originX": 0.4959677419354839,
+						"originY": 0.25675675675675674,
+						"originalSource": "C:\\Users\\colom\\OneDrive\\Desktop\\teleport platform.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6697491,
+						"collisionPoly": {
+							"points": [
+								0.0040322580645157854,
+								0.19594594594594517,
+								0.01814516129032189,
+								0.030405405405405407,
+								0.4959677419354839,
+								0.013513513513513514,
+								0.967741935483868,
+								0.03378378378378359,
+								0.907258064516126,
+								0.25,
+								0.8830645161290323,
+								0.5675675675675675,
+								0.4959677419354839,
+								0.9864864864864865,
+								0.1693548387096774,
+								0.4594594594594595,
+								0.16935483870967755,
+								0.23648648648648649
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 248,
+						"height": 148,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4182825,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 478490165639983,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

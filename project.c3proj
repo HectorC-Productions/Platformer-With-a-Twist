@@ -118,7 +118,11 @@
 			"BuySpring4",
 			"Platform5",
 			"BuySpring5",
-			"Coin2"
+			"Coin2",
+			"Platform6",
+			"BuySpring6",
+			"Teleport2",
+			"BuySpring7"
 		],
 		"subfolders": []
 	},
@@ -314,5 +318,5 @@
 	},
 	"viewportWidth": 960,
 	"viewportHeight": 960,
-	"firstLayout": null
+	"firstLayout": "TitleScreen"
 }

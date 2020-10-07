@@ -1,0 +1,57 @@
+{
+	"name": "BuySpring6",
+	"plugin-id": "Sprite",
+	"sid": 858419748091718,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 210,
+						"height": 255,
+						"originX": 0.35714285714285715,
+						"originY": 0.42745098039215684,
+						"originalSource": "C:\\Users\\enman\\Desktop\\github cat  project\\Platformer-With-a-Twist\\images\\buy button - Copy-export.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2290549,
+						"collisionPoly": {
+							"points": [
+								0.023809523809523808,
+								0.34901960784313724,
+								0.35714285714285715,
+								0.0392156862745098,
+								0.9809523809523809,
+								0.10588235294117647,
+								0.8809523809523809,
+								0.42745098039215684,
+								0.8809523809523809,
+								0.6627450980392157,
+								0.35714285714285715,
+								0.9882352941176471,
+								0.04285714285714286,
+								0.48627450980392156,
+								0.004761904761904762,
+								0.42745098039215684
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 884622756115292,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
