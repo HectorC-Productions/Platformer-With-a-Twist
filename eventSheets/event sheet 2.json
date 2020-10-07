@@ -1,0 +1,57 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 713307330619747,
+					"parameters": {
+						"object": "Sprite6"
+					}
+				},
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 386700937701110,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Sprite6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite6",
+					"sid": 672267655399559,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 615659491158473,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 685475098304282,
+					"parameters": {
+						"layout": "GameScene"
+					}
+				}
+			],
+			"sid": 363299150518423,
+			"isOrBlock": true
+		}
+	],
+	"sid": 157185206521947
+}

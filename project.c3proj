@@ -105,7 +105,14 @@
 			"Build4",
 			"Sprite3",
 			"Sprite4",
-			"Sprite5"
+			"Sprite5",
+			"TiledBackground",
+			"TiledBackground2",
+			"TiledBackground3",
+			"GameTitle",
+			"Sprite6",
+			"PlayText",
+			"LevelCompleted"
 		],
 		"subfolders": []
 	},
@@ -117,13 +124,16 @@
 	},
 	"layouts": {
 		"items": [
-			"GameScene"
+			"GameScene",
+			"TitleScreen",
+			"LvlCompleted"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Event sheet 2"
 		],
 		"subfolders": []
 	},
