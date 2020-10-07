@@ -103,7 +103,7 @@
 			"Teleport",
 			"Platform4",
 			"Build4",
-			"Sprite3",
+			"Coin",
 			"Portal",
 			"BuySpring",
 			"TiledBackground",
@@ -114,7 +114,8 @@
 			"PlayText",
 			"LevelCompleted",
 			"BuySpring2",
-			"BuySpring3"
+			"BuySpring3",
+			"BuySpring4"
 		],
 		"subfolders": []
 	},

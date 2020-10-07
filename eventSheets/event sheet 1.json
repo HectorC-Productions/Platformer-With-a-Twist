@@ -143,6 +143,31 @@
 			"sid": 885234841728904
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Monster",
+					"sid": 797382834142748,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 626980891966197,
+					"parameters": {
+						"variable": "Multiplier",
+						"value": "2"
+					}
+				}
+			],
+			"sid": 282507776559042
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "FirstPlatform",
@@ -867,8 +892,32 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "Build4",
-							"sid": 183335653281036,
+							"objectClass": "BuySpring4",
+							"sid": 692376973339663,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Platform4",
+							"sid": 328982137934294,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Teleport",
+							"sid": 495134218387362,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Portal",
+							"sid": 987542059725087,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -898,19 +947,19 @@
 						{
 							"id": "on-tap-object",
 							"objectClass": "Touch",
-							"sid": 353688825016038,
+							"sid": 850492572534817,
 							"parameters": {
-								"object": "Build4"
+								"object": "BuySpring4"
 							}
 						},
 						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
-							"sid": 586371190196511,
+							"sid": 544913416570677,
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "Build4"
+								"object-clicked": "BuySpring4"
 							}
 						}
 					],
@@ -964,8 +1013,8 @@
 						},
 						{
 							"id": "destroy",
-							"objectClass": "Build4",
-							"sid": 944459239550063
+							"objectClass": "BuySpring4",
+							"sid": 823976173432246
 						},
 						{
 							"id": "set-boolean-instvar",
