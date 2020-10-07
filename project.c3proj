@@ -99,7 +99,10 @@
 			"Platform2",
 			"Build2",
 			"Platform3",
-			"Build3"
+			"Build3",
+			"Teleport",
+			"Platform4",
+			"Build4"
 		],
 		"subfolders": []
 	},
