@@ -1,39 +1,39 @@
 {
-	"name": "Platform1",
+	"name": "Platform3",
 	"plugin-id": "Sprite",
-	"sid": 333844280991474,
+	"sid": 397566655092339,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "PassiveIncome",
 			"type": "number",
 			"desc": "",
-			"sid": 194114604836023
+			"sid": 259734367294437
 		},
 		{
 			"name": "ClickableIncome",
 			"type": "number",
 			"desc": "",
-			"sid": 973530732403606
+			"sid": 770735833785832
 		},
 		{
 			"name": "Tier",
 			"type": "number",
 			"desc": "",
-			"sid": 328090159779682
+			"sid": 736539606284096
 		},
 		{
 			"name": "NotGlowing",
 			"type": "boolean",
-			"desc": "Stop the platform from glowing after buying it",
-			"sid": 171162067977085
+			"desc": "",
+			"sid": 151855243980610
 		}
 	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 294747382041349
+			"sid": 354044573206771
 		}
 	],
 	"effectTypes": [],
@@ -49,7 +49,7 @@
 						"originalSource": "C:\\Users\\enman\\Desktop\\github cat  project\\Platformer-With-a-Twist\\images\\platform 2 .png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2208559,
+						"imageSpriteId": 1122855,
 						"collisionPoly": {
 							"points": [
 								0.009120521172638407,
@@ -85,7 +85,7 @@
 						"originalSource": "C:\\Users\\enman\\Desktop\\github cat  project\\Platformer-With-a-Twist\\images\\platform 2 highlight - Copy-export.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6586165,
+						"imageSpriteId": 1689270,
 						"collisionPoly": {
 							"points": [
 								0.07106017191977068,
@@ -114,7 +114,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 470861365701559,
+				"sid": 395017773244843,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

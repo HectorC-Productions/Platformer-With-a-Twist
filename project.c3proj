@@ -95,7 +95,11 @@
 			"Sprite2",
 			"Platform1",
 			"Monster",
-			"BuyButton2"
+			"Build",
+			"Platform2",
+			"Build2",
+			"Platform3",
+			"Build3"
 		],
 		"subfolders": []
 	},

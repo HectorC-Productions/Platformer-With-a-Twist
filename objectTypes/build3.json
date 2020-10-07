@@ -1,7 +1,7 @@
 {
-	"name": "BuyButton2",
+	"name": "Build3",
 	"plugin-id": "Sprite",
-	"sid": 534004841373539,
+	"sid": 665645710430026,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1589424,
+						"imageSpriteId": 5760231,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 565828088793085,
+				"sid": 648068076845139,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
