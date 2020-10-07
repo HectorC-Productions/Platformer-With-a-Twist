@@ -207,7 +207,7 @@
 				{
 					"type": "GameTitle",
 					"properties": {
-						"text": "Game Name Here",
+						"text": "Idle Jumper",
 						"enable-bbcode": true,
 						"font": "PressStart2P-Regular",
 						"size": 35.79999999999998,
