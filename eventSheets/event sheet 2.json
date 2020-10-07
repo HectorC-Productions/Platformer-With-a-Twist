@@ -47,6 +47,11 @@
 					"parameters": {
 						"layout": "GameScene"
 					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 748185200382544
 				}
 			],
 			"sid": 363299150518423,

@@ -166,8 +166,16 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "Build",
-							"sid": 280757368754839,
+							"objectClass": "BuySpring",
+							"sid": 595710435976704,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Platform1",
+							"sid": 866494120491816,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -189,19 +197,19 @@
 						{
 							"id": "on-tap-object",
 							"objectClass": "Touch",
-							"sid": 173407674520878,
+							"sid": 459487990435914,
 							"parameters": {
-								"object": "Build"
+								"object": "BuySpring"
 							}
 						},
 						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
-							"sid": 163180125874404,
+							"sid": 570845303879304,
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "Build"
+								"object-clicked": "BuySpring"
 							}
 						}
 					],
@@ -246,8 +254,8 @@
 						},
 						{
 							"id": "destroy",
-							"objectClass": "Build",
-							"sid": 615113649036555
+							"objectClass": "BuySpring",
+							"sid": 116049224835327
 						},
 						{
 							"id": "set-boolean-instvar",
@@ -399,8 +407,16 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "Build2",
-							"sid": 347735212436638,
+							"objectClass": "BuySpring2",
+							"sid": 871899582806458,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Platform2",
+							"sid": 349181796382225,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -422,19 +438,19 @@
 						{
 							"id": "on-tap-object",
 							"objectClass": "Touch",
-							"sid": 276698049804861,
+							"sid": 572064006849823,
 							"parameters": {
-								"object": "Build2"
+								"object": "BuySpring2"
 							}
 						},
 						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
-							"sid": 752592441851741,
+							"sid": 425508752663194,
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "Build2"
+								"object-clicked": "BuySpring2"
 							}
 						}
 					],
@@ -479,8 +495,8 @@
 						},
 						{
 							"id": "destroy",
-							"objectClass": "Build2",
-							"sid": 708923441123847
+							"objectClass": "BuySpring2",
+							"sid": 184352543372924
 						},
 						{
 							"id": "set-boolean-instvar",
@@ -621,8 +637,16 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "Build3",
-							"sid": 136725573972265,
+							"objectClass": "BuySpring3",
+							"sid": 149018900762066,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Platform3",
+							"sid": 601559479574148,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -644,19 +668,19 @@
 						{
 							"id": "on-tap-object",
 							"objectClass": "Touch",
-							"sid": 404070100755976,
+							"sid": 708673771215853,
 							"parameters": {
-								"object": "Build3"
+								"object": "BuySpring3"
 							}
 						},
 						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
-							"sid": 576116764402182,
+							"sid": 753379908692264,
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "Build3"
+								"object-clicked": "BuySpring3"
 							}
 						}
 					],
@@ -701,8 +725,8 @@
 						},
 						{
 							"id": "destroy",
-							"objectClass": "Build3",
-							"sid": 832092685935330
+							"objectClass": "BuySpring3",
+							"sid": 462228618685580
 						},
 						{
 							"id": "set-boolean-instvar",
@@ -1074,12 +1098,12 @@
 							}
 						},
 						{
-							"id": "set-position",
+							"id": "set-position-to-another-object",
 							"objectClass": "Monster",
-							"sid": 268003126956268,
+							"sid": 308660604922223,
 							"parameters": {
-								"x": "72",
-								"y": "490"
+								"object": "Portal",
+								"image-point-optional": "0"
 							}
 						}
 					],

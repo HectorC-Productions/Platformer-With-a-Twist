@@ -1,7 +1,7 @@
 {
-	"name": "Sprite5",
+	"name": "BuySpring3",
 	"plugin-id": "Sprite",
-	"sid": 772530239316018,
+	"sid": 706360424059188,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,7 +18,7 @@
 						"originalSource": "C:\\Users\\enman\\Desktop\\github cat  project\\Platformer-With-a-Twist\\images\\buy button - Copy-export.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6218743,
+						"imageSpriteId": 8060635,
 						"collisionPoly": {
 							"points": [
 								0.023809523809523808,
@@ -43,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 268136632854917,
+				"sid": 893282863857031,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

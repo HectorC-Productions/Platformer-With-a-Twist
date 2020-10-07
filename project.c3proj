@@ -104,15 +104,17 @@
 			"Platform4",
 			"Build4",
 			"Sprite3",
-			"Sprite4",
-			"Sprite5",
+			"Portal",
+			"BuySpring",
 			"TiledBackground",
 			"TiledBackground2",
 			"TiledBackground3",
 			"GameTitle",
 			"Sprite6",
 			"PlayText",
-			"LevelCompleted"
+			"LevelCompleted",
+			"BuySpring2",
+			"BuySpring3"
 		],
 		"subfolders": []
 	},
