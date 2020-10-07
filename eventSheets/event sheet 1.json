@@ -182,6 +182,54 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "key-is-down",
+					"objectClass": "PlayerControl",
+					"sid": 311006142621757,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Monster",
+					"sid": 177906947037661,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 685183316242776
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "PlayerControl",
+					"sid": 479827326437362,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Monster",
+					"sid": 108312440489519,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 753562757022992
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Monster",
 					"sid": 797382834142748,
