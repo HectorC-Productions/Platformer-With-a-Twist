@@ -87,6 +87,17 @@
 						"variable": "Money",
 						"value": "1*Multiplier"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 618200773081563,
+					"parameters": {
+						"audio-file": "coin_sound",
+						"loop": "not-looping",
+						"volume": "-15",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 194193794667821,
@@ -146,6 +157,31 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-moved",
+					"objectClass": "Monster",
+					"sid": 329140643544447,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 574068439372315,
+					"parameters": {
+						"audio-file": "Walking",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 455480558193642
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Monster",
 					"sid": 797382834142748,
@@ -167,6 +203,17 @@
 					"parameters": {
 						"variable": "Multiplier",
 						"value": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 492013853142530,
+					"parameters": {
+						"audio-file": "CollectingCoin",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -197,6 +244,17 @@
 					"parameters": {
 						"variable": "Multiplier",
 						"value": "3"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 660956801253313,
+					"parameters": {
+						"audio-file": "CollectingCoin",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -405,9 +463,9 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 827274606027756,
+							"sid": 898840569918954,
 							"parameters": {
-								"audio-file": "Goofy Spring Bounce",
+								"audio-file": "PlatformClick",
 								"loop": "not-looping",
 								"volume": "0",
 								"tag-optional": "\"\""
@@ -642,6 +700,17 @@
 								"variable": "Money",
 								"value": "Platform2.ClickableIncome"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 341412862572279,
+							"parameters": {
+								"audio-file": "PlatformClick",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 578964886283297
@@ -871,6 +940,17 @@
 							"parameters": {
 								"variable": "Money",
 								"value": "Platform3.ClickableIncome"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 430719264936832,
+							"parameters": {
+								"audio-file": "PlatformClick",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -1151,6 +1231,17 @@
 								"variable": "Money",
 								"value": "Platform4.ClickableIncome"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 745172796035709,
+							"parameters": {
+								"audio-file": "PlatformClick",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 186294422573434
@@ -1417,6 +1508,17 @@
 								"variable": "Money",
 								"value": "Platform5.ClickableIncome"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 397231252438272,
+							"parameters": {
+								"audio-file": "PlatformClick",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 856183249915752
@@ -1646,6 +1748,17 @@
 							"parameters": {
 								"variable": "Money",
 								"value": "Platform6.ClickableIncome"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 153594924461549,
+							"parameters": {
+								"audio-file": "PlatformClick",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
