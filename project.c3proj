@@ -99,7 +99,14 @@
 			"Platform2",
 			"Build2",
 			"Platform3",
-			"Build3"
+			"Build3",
+			"GameTitle",
+			"PlayButton",
+			"PlayText",
+			"BackgroundTile",
+			"TiledBackground",
+			"TiledBackground2",
+			"LevelComplete"
 		],
 		"subfolders": []
 	},
@@ -111,13 +118,16 @@
 	},
 	"layouts": {
 		"items": [
-			"GameScene"
+			"GameScene",
+			"TitleScreen",
+			"LevelCompleted"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Event sheet 2"
 		],
 		"subfolders": []
 	},
