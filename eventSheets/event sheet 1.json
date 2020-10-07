@@ -156,9 +156,14 @@
 			],
 			"actions": [
 				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 345054352873826
+				},
+				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 626980891966197,
+					"sid": 570325121050205,
 					"parameters": {
 						"variable": "Multiplier",
 						"value": "2"
@@ -166,6 +171,36 @@
 				}
 			],
 			"sid": 282507776559042
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Monster",
+					"sid": 538624652676041,
+					"parameters": {
+						"object": "Coin2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Coin2",
+					"sid": 436495382028467
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 958283776507933,
+					"parameters": {
+						"variable": "Multiplier",
+						"value": "3"
+					}
+				}
+			],
+			"sid": 917220762001091
 		},
 		{
 			"eventType": "group",
@@ -1049,6 +1084,12 @@
 								"comparison": 0,
 								"value": "1"
 							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Platform4",
+							"sid": 272446421901952,
+							"behaviorType": "Solid"
 						}
 					],
 					"actions": [
@@ -1160,6 +1201,211 @@
 				}
 			],
 			"sid": 466913544761921
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "5th Platform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 800759968863594,
+							"parameters": {
+								"variable": "Money",
+								"comparison": 5,
+								"value": "750"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BuySpring5",
+							"sid": 856472550049331,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Platform5",
+							"sid": 577962058918761,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform5",
+							"sid": 228646347920388,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 281360926376833
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 859222845134330,
+							"parameters": {
+								"object": "BuySpring5"
+							}
+						},
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 724192889102141,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "BuySpring5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 613809912796644,
+							"parameters": {
+								"variable": "Money",
+								"value": "750"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 308360735847834,
+							"parameters": {
+								"audio-file": "coin_sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Platform5",
+							"sid": 263619147398643,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Platform5",
+							"sid": 173909515584563,
+							"parameters": {
+								"instance-variable": "Tier",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "BuySpring5",
+							"sid": 275064036250965
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Platform5",
+							"sid": 832689305596366,
+							"parameters": {
+								"instance-variable": "NotGlowing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform5",
+							"sid": 537946266960327,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 694656911569492,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Platform5",
+							"sid": 864972223106919,
+							"parameters": {
+								"instance-variable": "Tier",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Platform5",
+							"sid": 410006481301675,
+							"behaviorType": "Solid"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform5",
+							"sid": 699670286128178,
+							"parameters": {
+								"instance-variable": "PassiveIncome",
+								"value": "Platform5.Tier"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform5",
+							"sid": 867496576080797,
+							"parameters": {
+								"instance-variable": "ClickableIncome",
+								"value": "25*Platform5.Tier"
+							}
+						}
+					],
+					"sid": 187462498501741
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Platform5",
+							"sid": 209673337487159,
+							"parameters": {
+								"instance-variable": "NotGlowing"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform5",
+							"sid": 938220979308750,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 469364570131912
+				}
+			],
+			"sid": 910420424922694
 		}
 	],
 	"sid": 149858398527401

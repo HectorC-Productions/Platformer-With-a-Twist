@@ -1,0 +1,57 @@
+{
+	"name": "Coin2",
+	"plugin-id": "Sprite",
+	"sid": 719250397146896,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 194,
+						"height": 190,
+						"originX": 0.5051546391752577,
+						"originY": 0.4105263157894737,
+						"originalSource": "C:\\Users\\enman\\Desktop\\github cat  project\\Platformer-With-a-Twist\\images\\coin.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7661935,
+						"collisionPoly": {
+							"points": [
+								0.05670103092783505,
+								0.21578947368421053,
+								0.5051546391752577,
+								0.005263157894736842,
+								0.9432989690721647,
+								0.22105263157894736,
+								0.9896907216494846,
+								0.4105263157894737,
+								0.9845360824742269,
+								0.6368421052631579,
+								0.5051546391752577,
+								0.9842105263157894,
+								0.015463917525773196,
+								0.6421052631578947,
+								0.020618556701030927,
+								0.4105263157894737
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 990113294457875,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

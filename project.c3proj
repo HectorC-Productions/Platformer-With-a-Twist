@@ -115,7 +115,10 @@
 			"LevelCompleted",
 			"BuySpring2",
 			"BuySpring3",
-			"BuySpring4"
+			"BuySpring4",
+			"Platform5",
+			"BuySpring5",
+			"Coin2"
 		],
 		"subfolders": []
 	},

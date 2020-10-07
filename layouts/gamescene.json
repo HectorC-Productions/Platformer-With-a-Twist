@@ -30,7 +30,7 @@
 			"global": false
 		},
 		{
-			"name": "Coin",
+			"name": "Game",
 			"overriden": 0,
 			"instances": [
 				{
@@ -428,8 +428,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 285,
-						"y": 373,
+						"x": 769,
+						"y": 473,
 						"width": 60,
 						"height": 57,
 						"originX": 0.5051546391752577,
@@ -579,6 +579,105 @@
 						"height": 73,
 						"originX": 0.35714285714285715,
 						"originY": 0.42745098039215684,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Platform5",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 16,
+					"instanceVariables": {
+						"PassiveIncome": 0,
+						"ClickableIncome": 25,
+						"Tier": 0,
+						"NotGlowing": false
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 230,
+						"y": 432,
+						"width": 80.09943820027702,
+						"height": 52.69699881597174,
+						"originX": 0.46254071661237783,
+						"originY": 0.20408163265306123,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BuySpring5",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 33,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 318,
+						"y": 439,
+						"width": 64,
+						"height": 73,
+						"originX": 0.35714285714285715,
+						"originY": 0.42745098039215684,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Coin2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 34,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 73,
+						"y": 468,
+						"width": 60,
+						"height": 57,
+						"originX": 0.5051546391752577,
+						"originY": 0.4105263157894737,
 						"color": [
 							1,
 							1,
