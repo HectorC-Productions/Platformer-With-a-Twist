@@ -38,7 +38,7 @@
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
-						"wrap-horizontal": "repeat",
+						"wrap-horizontal": "clamp-to-edge",
 						"wrap-vertical": "repeat",
 						"image-offset-x": 0,
 						"image-offset-y": 0,
@@ -56,9 +56,9 @@
 						}
 					},
 					"world": {
-						"x": 3,
-						"y": 934,
-						"width": 569,
+						"x": -5,
+						"y": 938,
+						"width": 965,
 						"height": 24,
 						"originX": 0,
 						"originY": 0,
@@ -73,7 +73,7 @@
 					}
 				},
 				{
-					"type": "BuyablePlatform",
+					"type": "Platform1",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -81,11 +81,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 7,
+					"uid": 11,
 					"instanceVariables": {
-						"PassiveMoney": 0,
-						"TapMoney": 5,
-						"Tier": 0
+						"PassiveIncome": 0,
+						"ClickableIncome": 5,
+						"Tier": 0,
+						"NotGlowing": false
 					},
 					"behaviors": {
 						"Solid": {
@@ -96,68 +97,10 @@
 						}
 					},
 					"world": {
-						"x": 651,
-						"y": 857,
-						"width": 128,
-						"height": 17,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "BuyButton",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 9,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 652,
-						"y": 824,
-						"width": 127,
-						"height": 47,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Sprite3",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 11,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 656,
-						"y": 633,
-						"width": 114,
-						"height": 75,
+						"x": 908,
+						"y": 882,
+						"width": 80.09943820027704,
+						"height": 52.69699881597174,
 						"originX": 0.46254071661237783,
 						"originY": 0.20408163265306123,
 						"color": [
@@ -198,12 +141,287 @@
 						}
 					},
 					"world": {
-						"x": 481,
-						"y": 772,
+						"x": 147,
+						"y": 924,
 						"width": 90,
 						"height": 38,
 						"originX": 0.3018867924528302,
 						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Build",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 2,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 907,
+						"y": 847,
+						"width": 77,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Platform2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 7,
+					"instanceVariables": {
+						"PassiveIncome": 0,
+						"ClickableIncome": 10,
+						"Tier": 0,
+						"NotGlowing": false
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 766,
+						"y": 774,
+						"width": 80.09943820027702,
+						"height": 52.69699881597174,
+						"originX": 0.46254071661237783,
+						"originY": 0.20408163265306123,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Build2",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 767,
+						"y": 740,
+						"width": 77,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Platform3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 10,
+					"instanceVariables": {
+						"PassiveIncome": 0,
+						"ClickableIncome": 15,
+						"Tier": 0,
+						"NotGlowing": false
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 903,
+						"y": 637,
+						"width": 80.09943820027702,
+						"height": 52.69699881597174,
+						"originX": 0.46254071661237783,
+						"originY": 0.20408163265306123,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Build3",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 13,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 904,
+						"y": 601,
+						"width": 77,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Teleport",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 14,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 765,
+						"y": 531,
+						"width": 92.77979039862048,
+						"height": 54.029874915305754,
+						"originX": 0.4959677419354839,
+						"originY": 0.25675675675675674,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Platform4",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 15,
+					"instanceVariables": {
+						"PassiveIncome": 0,
+						"ClickableIncome": 20,
+						"Tier": 0,
+						"NotGlowing": false
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 72,
+						"y": 521,
+						"width": 80.09943820027702,
+						"height": 52.69699881597174,
+						"originX": 0.46254071661237783,
+						"originY": 0.20408163265306123,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Build4",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 16,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 768,
+						"y": 494,
+						"width": 77,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -248,7 +466,7 @@
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "PressStart2P-Regular",
 						"size": 12,
 						"line-height": 0,
 						"bold": false,

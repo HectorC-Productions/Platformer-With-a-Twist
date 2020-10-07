@@ -36,64 +36,6 @@
 			"sid": 545649285791721
 		},
 		{
-			"eventType": "comment",
-			"text": "Variables for click position"
-		},
-		{
-			"eventType": "variable",
-			"name": "TouchID",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "To recognize what its touching",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 560616785600699
-		},
-		{
-			"eventType": "variable",
-			"name": "TouchLastPositionX",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "Recognize the last place touched in the x-axis",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 645393287152402
-		},
-		{
-			"eventType": "variable",
-			"name": "TouchLastPositionY",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "Recognize the last place touched in the y-axis",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 387968700242884
-		},
-		{
-			"eventType": "comment",
-			"text": "Variables for when the game runs or doesnt run"
-		},
-		{
-			"eventType": "variable",
-			"name": "UnixTimeClose",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "The game needs to recognize when the game is closed",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 247275699041975
-		},
-		{
-			"eventType": "variable",
-			"name": "UnixTimeOpen",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "The game needs to recognize when the game opens up again",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 219514899876293
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -118,17 +60,21 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap",
+					"id": "on-tap-object",
 					"objectClass": "Touch",
-					"sid": 920322436242576
+					"sid": 216097395776437,
+					"parameters": {
+						"object": "Monster"
+					}
 				},
 				{
-					"id": "on-click",
+					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 658380034552738,
+					"sid": 104771141777059,
 					"parameters": {
 						"mouse-button": "left",
-						"click-type": "clicked"
+						"click-type": "clicked",
+						"object-clicked": "Monster"
 					}
 				}
 			],
@@ -162,18 +108,10 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 587255929927453,
+					"sid": 452710418269349,
 					"parameters": {
 						"variable": "Money",
-						"value": "ClickingNumber+BuyablePlatform.PassiveMoney"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "BuyablePlatform",
-					"sid": 132892147049738,
-					"parameters": {
-						"frame-number": "0"
+						"value": "ClickingNumber+Platform1.PassiveIncome+Platform2.PassiveIncome+Platform3.PassiveIncome"
 					}
 				}
 			],
@@ -183,188 +121,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 280767757964849,
-					"parameters": {
-						"variable": "Money",
-						"comparison": 5,
-						"value": "50"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "BuyButton",
-					"sid": 453735940877065,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "BuyablePlatform",
-					"sid": 574846864788146,
-					"parameters": {
-						"frame-number": "1"
-					}
-				}
-			],
-			"sid": 256841581172667
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 147556311635944,
-					"parameters": {
-						"object": "BuyButton"
-					}
-				},
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 185491291463545,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "BuyButton"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 990197964529698,
-					"parameters": {
-						"variable": "Money",
-						"value": "50"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 563678036620762,
-					"parameters": {
-						"audio-file": "coin_sound",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "BuyablePlatform",
-					"sid": 784467037896995,
-					"behaviorType": "Solid",
-					"parameters": {
-						"state": "enabled"
-					}
-				},
-				{
-					"id": "add-to-instvar",
-					"objectClass": "BuyablePlatform",
-					"sid": 974746803670778,
-					"parameters": {
-						"instance-variable": "Tier",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "BuyablePlatform",
-					"sid": 643340079431739,
-					"parameters": {
-						"frame-number": "1"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "BuyButton",
-					"sid": 384811314312029
-				}
-			],
-			"sid": 976287023368809,
-			"isOrBlock": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "BuyablePlatform",
-					"sid": 754330164740985,
-					"parameters": {
-						"instance-variable": "Tier",
-						"comparison": 0,
-						"value": "1"
-					}
-				},
-				{
-					"id": "is-enabled",
-					"objectClass": "BuyablePlatform",
-					"sid": 981624256682844,
-					"behaviorType": "Solid"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-instvar-value",
-					"objectClass": "BuyablePlatform",
-					"sid": 511024981345311,
-					"parameters": {
-						"instance-variable": "PassiveMoney",
-						"value": "BuyablePlatform.Tier"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "BuyablePlatform",
-					"sid": 529306569678924,
-					"parameters": {
-						"instance-variable": "TapMoney",
-						"value": "5*BuyablePlatform.Tier"
-					}
-				}
-			],
-			"sid": 561262424271386
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 139754511404621,
-					"parameters": {
-						"object": "BuyablePlatform"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 289324807387254,
-					"parameters": {
-						"variable": "Money",
-						"value": "BuyablePlatform.TapMoney"
-					}
-				}
-			],
-			"sid": 737832632807621
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-jump",
 					"objectClass": "Monster",
-					"sid": 546704898753815,
+					"sid": 498948463345134,
 					"behaviorType": "Platform"
 				}
 			],
@@ -372,7 +131,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 958613518375721,
+					"sid": 380747312766073,
 					"parameters": {
 						"audio-file": "jump_07",
 						"loop": "not-looping",
@@ -381,7 +140,953 @@
 					}
 				}
 			],
-			"sid": 893234615706345
+			"sid": 885234841728904
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FirstPlatform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 409439393740230,
+							"parameters": {
+								"variable": "Money",
+								"comparison": 5,
+								"value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Build",
+							"sid": 280757368754839,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform1",
+							"sid": 777985732580625,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 565827636553907
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 173407674520878,
+							"parameters": {
+								"object": "Build"
+							}
+						},
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 163180125874404,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Build"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 926251902346341,
+							"parameters": {
+								"variable": "Money",
+								"value": "50"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 361432803659438,
+							"parameters": {
+								"audio-file": "coin_sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Platform1",
+							"sid": 303674613704581,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Platform1",
+							"sid": 371007578529640,
+							"parameters": {
+								"instance-variable": "Tier",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Build",
+							"sid": 615113649036555
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Platform1",
+							"sid": 119967532926257,
+							"parameters": {
+								"instance-variable": "NotGlowing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform1",
+							"sid": 734740249720419,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 751780574107637,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Platform1",
+							"sid": 430641608134778,
+							"parameters": {
+								"instance-variable": "Tier",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Platform1",
+							"sid": 810813300736405,
+							"behaviorType": "Solid"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform1",
+							"sid": 339296984042558,
+							"parameters": {
+								"instance-variable": "PassiveIncome",
+								"value": "Platform1.Tier"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform1",
+							"sid": 537593264800987,
+							"parameters": {
+								"instance-variable": "ClickableIncome",
+								"value": "5*Platform1.Tier"
+							}
+						}
+					],
+					"sid": 334091567740275
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 516210959371584,
+							"parameters": {
+								"object": "Platform1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 872265576492535,
+							"parameters": {
+								"variable": "Money",
+								"value": "Platform1.ClickableIncome"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 827274606027756,
+							"parameters": {
+								"audio-file": "Goofy Spring Bounce",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 512718462355278
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Platform1",
+							"sid": 209512409907291,
+							"parameters": {
+								"instance-variable": "NotGlowing"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform1",
+							"sid": 529740623144398,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 925689843332861
+				}
+			],
+			"sid": 855271521509681
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SecondPlatform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 652526108600440,
+							"parameters": {
+								"variable": "Money",
+								"comparison": 5,
+								"value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Build2",
+							"sid": 347735212436638,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform2",
+							"sid": 901698690688543,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 637740985950812
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 276698049804861,
+							"parameters": {
+								"object": "Build2"
+							}
+						},
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 752592441851741,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Build2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 805390183201451,
+							"parameters": {
+								"variable": "Money",
+								"value": "100"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 295818523215518,
+							"parameters": {
+								"audio-file": "coin_sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Platform2",
+							"sid": 238166165763862,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Platform2",
+							"sid": 998043412890781,
+							"parameters": {
+								"instance-variable": "Tier",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Build2",
+							"sid": 708923441123847
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Platform2",
+							"sid": 309584161597755,
+							"parameters": {
+								"instance-variable": "NotGlowing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform2",
+							"sid": 497670036198886,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 896116001704222,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Platform2",
+							"sid": 288278932521287,
+							"parameters": {
+								"instance-variable": "Tier",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Platform2",
+							"sid": 178019557338351,
+							"behaviorType": "Solid"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform2",
+							"sid": 730612434410965,
+							"parameters": {
+								"instance-variable": "PassiveIncome",
+								"value": "Platform2.Tier"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform2",
+							"sid": 545322669668425,
+							"parameters": {
+								"instance-variable": "ClickableIncome",
+								"value": "10*Platform2.Tier"
+							}
+						}
+					],
+					"sid": 895433789129609
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 890378624533474,
+							"parameters": {
+								"object": "Platform2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 852494165758799,
+							"parameters": {
+								"variable": "Money",
+								"value": "Platform2.ClickableIncome"
+							}
+						}
+					],
+					"sid": 578964886283297
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Platform2",
+							"sid": 767069365571092,
+							"parameters": {
+								"instance-variable": "NotGlowing"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform2",
+							"sid": 534961606736776,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 298002245369294
+				}
+			],
+			"sid": 812846874492231
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ThirdPlatform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 411580762064528,
+							"parameters": {
+								"variable": "Money",
+								"comparison": 5,
+								"value": "250"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Build3",
+							"sid": 136725573972265,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform3",
+							"sid": 419507595019939,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 190727779849289
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 404070100755976,
+							"parameters": {
+								"object": "Build3"
+							}
+						},
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 576116764402182,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Build3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 437061048431592,
+							"parameters": {
+								"variable": "Money",
+								"value": "250"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 617905105701853,
+							"parameters": {
+								"audio-file": "coin_sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Platform3",
+							"sid": 253079674937762,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Platform3",
+							"sid": 846707708726861,
+							"parameters": {
+								"instance-variable": "Tier",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Build3",
+							"sid": 832092685935330
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Platform3",
+							"sid": 528630708258997,
+							"parameters": {
+								"instance-variable": "NotGlowing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform3",
+							"sid": 215723783935489,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 795085231903590,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Platform3",
+							"sid": 687109381833199,
+							"parameters": {
+								"instance-variable": "Tier",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Platform3",
+							"sid": 889980957536343,
+							"behaviorType": "Solid"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform3",
+							"sid": 112730315517043,
+							"parameters": {
+								"instance-variable": "PassiveIncome",
+								"value": "Platform3.Tier"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform3",
+							"sid": 965776173891608,
+							"parameters": {
+								"instance-variable": "ClickableIncome",
+								"value": "15*Platform3.Tier"
+							}
+						}
+					],
+					"sid": 652431576635979
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 843019257621720,
+							"parameters": {
+								"object": "Platform3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 580910220110709,
+							"parameters": {
+								"variable": "Money",
+								"value": "Platform3.ClickableIncome"
+							}
+						}
+					],
+					"sid": 904427874842161
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Platform3",
+							"sid": 444143295708639,
+							"parameters": {
+								"instance-variable": "NotGlowing"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform3",
+							"sid": 662710446872153,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 696125294899921
+				}
+			],
+			"sid": 544587588072784
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "4thPlatform/Teleport",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 195555140774658,
+							"parameters": {
+								"variable": "Money",
+								"comparison": 5,
+								"value": "500"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Build4",
+							"sid": 183335653281036,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform4",
+							"sid": 808232733210430,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Teleport",
+							"sid": 263084398528679,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 915222378800049
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 353688825016038,
+							"parameters": {
+								"object": "Build4"
+							}
+						},
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 586371190196511,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Build4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 433925854715550,
+							"parameters": {
+								"variable": "Money",
+								"value": "500"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 501672237396323,
+							"parameters": {
+								"audio-file": "coin_sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Platform4",
+							"sid": 462920209468392,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Teleport",
+							"sid": 356777260146336,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Platform4",
+							"sid": 595364628016227,
+							"parameters": {
+								"instance-variable": "Tier",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Build4",
+							"sid": 944459239550063
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Platform4",
+							"sid": 225824776341079,
+							"parameters": {
+								"instance-variable": "NotGlowing",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform4",
+							"sid": 960375084221102,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 507998721693264,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Platform4",
+							"sid": 965008951844666,
+							"parameters": {
+								"instance-variable": "Tier",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform4",
+							"sid": 659486902603470,
+							"parameters": {
+								"instance-variable": "PassiveIncome",
+								"value": "Platform4.Tier"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Platform4",
+							"sid": 367552921975955,
+							"parameters": {
+								"instance-variable": "ClickableIncome",
+								"value": "20*Platform4.Tier"
+							}
+						}
+					],
+					"sid": 452360539106355
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 423152526053489,
+							"parameters": {
+								"object": "Platform4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 102311824084845,
+							"parameters": {
+								"variable": "Money",
+								"value": "Platform4.ClickableIncome"
+							}
+						}
+					],
+					"sid": 186294422573434
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Platform4",
+							"sid": 150364394938296,
+							"parameters": {
+								"instance-variable": "NotGlowing"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Platform4",
+							"sid": 179795754802927,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 594880747370317
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Monster",
+							"sid": 610675852758117,
+							"parameters": {
+								"object": "Teleport"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 983329047964261,
+							"parameters": {
+								"audio-file": "teleport_sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Monster",
+							"sid": 268003126956268,
+							"parameters": {
+								"x": "72",
+								"y": "490"
+							}
+						}
+					],
+					"sid": 456125042431232
+				}
+			],
+			"sid": 466913544761921
 		}
 	],
 	"sid": 149858398527401
