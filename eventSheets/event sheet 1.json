@@ -119,10 +119,10 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 452710418269349,
+					"sid": 659700144201028,
 					"parameters": {
 						"variable": "Money",
-						"value": "ClickingNumber+Platform1.PassiveIncome+Platform2.PassiveIncome+Platform3.PassiveIncome"
+						"value": "ClickingNumber+Platform1.PassiveIncome+Platform2.PassiveIncome+Platform3.PassiveIncome+Platform4.PassiveIncome+Platform5.PassiveIncome+Platform6.Tier"
 					}
 				}
 			],
