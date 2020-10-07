@@ -1,0 +1,57 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 701390703241046,
+					"parameters": {
+						"object": "PlayButton"
+					}
+				},
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 835275502212757,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "PlayButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "PlayButton",
+					"sid": 956677103546228,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 764488124613300,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 132064173739413,
+					"parameters": {
+						"layout": "GameScene"
+					}
+				}
+			],
+			"sid": 800447720766655,
+			"isOrBlock": true
+		}
+	],
+	"sid": 654257446185798
+}
